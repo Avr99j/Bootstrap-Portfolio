@@ -51,15 +51,13 @@ li a {
     color: var(--WHITE);
 }
 
-section {
+.content {
     display: grid;
+    align-items: center;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
     grid-template-areas:
-        "punchline punchline img"
-        "about about about"
-        "projects projects projects"
-        "contact contact contact";
+        "punchline punchline img";
+    margin-bottom: 18rem;
 }
 
 
@@ -67,15 +65,76 @@ section .punchline {
     grid-area: punchline;
     color: var(--WHITE);
     font-size: var(--XLARGE);
+    font-style: italic;
 }
 
-section .picture {
+section .display-picture {
     height: 20em;
     grid-area: img;
     justify-content: center;
     margin-left: 10rem;
 }
 
-.content {
+.description {
+    display: grid;
     align-items: center;
+    justify-items: start;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+        "about-title about-description about-description"
+        "tech-title tech-description tech-description"
+        "projects-title projects-description projects-description"
+        "contact-title contact-description contact-description"
+}
+
+.description .about-title {
+    grid-area: about-title;
+    font-style: italic;
+    color: var(--WHITE);
+    margin-bottom: 10rem;
+}
+
+.description .tech-title {
+    grid-area: tech-title;
+    color: var(--WHITE);
+    margin-bottom: 10rem;
+}
+
+.description .projects-title {
+    grid-area: projects-title;
+    color: var(--WHITE);
+    margin-bottom: 10rem;
+}
+
+.description .contact-title {
+    grid-area: contact-title;
+    color: var(--WHITE);
+    margin-bottom: 10rem;
+}
+
+.description #about {
+    grid-area: about-description;
+    color: aquamarine;
+}
+
+.description #tech {
+    grid-area: tech-description;
+    color: red
+}
+
+.description #projects {
+    grid-area: projects-description;
+    color: blanchedalmond;
+}
+
+.description #contact {
+    grid-area: contact-description;
+    color: blueviolet;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    color: var(--WHITE);
 }
