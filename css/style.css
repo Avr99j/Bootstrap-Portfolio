@@ -1,0 +1,81 @@
+:root {
+    /* Font size */
+    --XSMALL: 0.25rem;
+    --SMALL: 0.5rem;
+    --REGULAR: 1rem;
+    --LARGE: 1.5rem;
+    --XLARGE: 3rem;
+    --XXLARGE: 4rem;
+
+    ;
+    /* Colour*/
+    --BLACK: black;
+    --GREY: rgb(47, 45, 45);
+    --WHITE: rgb(239, 232, 232);
+}
+
+body {
+    background-color: var(--GREY);
+    margin: 1rem 5rem 1rem 5rem;
+    font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.header {
+    display: flex;
+    flex-wrap: nowrap;
+    color: var(--WHITE);
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    padding: 1rem;
+    margin-bottom: 6rem;
+    position: sticky;
+    top: 0;
+}
+
+
+.header .name {
+    padding: 0px;
+}
+
+.nav__ul li {
+    display: inline;
+    list-style: none;
+    padding: 5px;
+    margin: 1rem;
+}
+
+li a {
+    text-decoration: none;
+    color: var(--WHITE);
+}
+
+section {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+        "punchline punchline img"
+        "about about about"
+        "projects projects projects"
+        "contact contact contact";
+}
+
+
+section .punchline {
+    grid-area: punchline;
+    color: var(--WHITE);
+    font-size: var(--XLARGE);
+}
+
+section .picture {
+    height: 20em;
+    grid-area: img;
+    justify-content: center;
+    margin-left: 10rem;
+}
+
+.content {
+    align-items: center;
+}
