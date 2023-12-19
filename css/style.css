@@ -80,8 +80,8 @@ section .display-picture {
 
 .description {
     display: grid;
-    align-items: start;
-    justify-items: start;
+    align-items: center;
+    justify-content: start;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
     grid-template-areas:
@@ -107,6 +107,7 @@ section .display-picture {
 
 .description .projects-title {
     grid-area: projects-title;
+    align-content: start;
     color: var(--WHITE);
     margin-bottom: 10rem;
 }
@@ -143,6 +144,10 @@ section .display-picture {
 .image-pop:hover {
     transform: scale(1.1);
     /* Scale the image up by 10% on hover */
+}
+
+#contact {
+    margin-left: -200px;
 }
 
 
